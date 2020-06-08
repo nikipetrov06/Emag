@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/emag?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: klbrjanba123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  servlet:
+    session:
+      timeout: 20m
+
+image:
+  path: /src/main/resources/static
+
+logging:
+  pattern:
+    console: '%-5level %d{yyyy-MM-dd HH:mm:ss} [%thread] %logger{36} - %msg%n'
+    file: '%-5level %d{yyyy-MM-dd HH:mm:ss} [%thread] %logger{36} - %msg%n'
+  file:
+    name: logFiles/app.log
